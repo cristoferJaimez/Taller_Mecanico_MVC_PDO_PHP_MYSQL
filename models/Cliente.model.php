@@ -17,6 +17,14 @@
         
         }
 
+        //CRUD Clientes
+        public function guardarCliente(){
+
+        }
+
+        public function buscarCliente(){
+
+        }
 
         public function listarClientes(){
             try {
@@ -30,8 +38,44 @@
                 die($e->getMessage());
             }
         }
-        
+
+
+
+       public function cargarVehiculos(){
+        try {
+
+            $query= "SELECT * FROM `clie_vehi` WHERE cliente_idcliente = ?";
+            $smt = $this->conn->prepare($query);
+            $smt->execute();
+            return $smt->fetchAll(PDO::FETCH_OBJ);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+       }
+       
+       
+       public function cargarHistorial(){
+
+       }
+       
+
+       public function guardarVehiculo(){
+
+       }
+
+       public function guardarRepuesto(){
+
+       }
+
+
+
+       
+
     }
+  
     
+
     
 ?>

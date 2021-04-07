@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/materialize.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css/materialize.css" media="screen" />
     <title>Sign Up</title>
 </head>
 <body>
+
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">Taller Mecanico</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="../../index.php">HOME</a></li>
+      <li><a href="module-signUp/signUp.html">Reporte</a></li>
+    </ul>
+  </div>
+</nav>
 
    
  <div class="container" >
@@ -21,7 +32,7 @@
           
 
             <!--formulario-->
-            <form action="" method="POST">
+            <form action="?action=guardar" method="POST">
 
                      <div class="row">
                         <div class="input-field col s12">
@@ -43,10 +54,10 @@
                       
 
                       <label>Seleccione Nacionalidad</label>
-                        <select class="browser-default">
+                        <select class="input-field">
                             <option value="" disabled selected>Elija su opción</option>
-                            <option value="1">Colombiano</option>
-                            <option value="2">Extranjero</option>
+                            <option value="Colombiano">Colombiano</option>
+                            <option value="Extranjero">Extranjero</option>
                         </select>
 
 
@@ -107,6 +118,11 @@
 
   <script src="assets/js/jQuery.min.js"> </script>
   <script src="assets/js/materialize.js"> </script>  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+  </script>
 
 </body>
 </html>

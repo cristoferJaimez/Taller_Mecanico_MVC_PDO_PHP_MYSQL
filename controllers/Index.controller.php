@@ -15,8 +15,16 @@
             
         
 
-        function index(){
+        public function index(){
             include_once 'views/module-home/home.php';
         }
+
+
+        public function nuevoCliente(){
+            include_once 'views/module-signUp/signUp.html';
+        }
+
+
+        
     }
 ?>
