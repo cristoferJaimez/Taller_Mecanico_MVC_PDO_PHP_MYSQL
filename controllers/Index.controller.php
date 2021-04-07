@@ -1,13 +1,22 @@
 <?php 
+ 
+    include_once 'models/Cliente.model.php';
+
 
     class IndexController
     {
-        function index(){
-            include_once 'views/module-home/home.html';
+
+        public $MODEL;
+
+        public function __construct(){
+            $this->MODEL = new ClienteModel();
         }
         
+            
+        
+
+        function index(){
+            include_once 'views/module-home/home.php';
+        }
     }
-    
-
-
 ?>
